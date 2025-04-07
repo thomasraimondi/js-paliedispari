@@ -1,5 +1,6 @@
 let userNumber;
 let userChoice;
+let outputMessage;
 
 do {
   userChoice = prompt("Scegli se pari o dispari", "pari");
@@ -27,12 +28,15 @@ const evenWin = userWin(sumNumbers);
 console.log("pari? " + evenWin);
 
 if ((userChoice === "pari") & evenWin) {
-  console.log("Ha vinto l'utente");
+  outputMessage = "Ha vinto l'utente";
 } else if ((userChoice === "dispari") & !evenWin) {
-  console.log("Ha vinto l'utente");
+  outputMessage = "Ha vinto l'utente";
 } else {
-  console.log("Ha vinto il pc");
+  outputMessage = "Ha vinto il pc";
 }
+
+alert(outputMessage);
+console.log(outputMessage);
 
 /**
  * Questa funzione genera un numero casuale tra minimo e massimo che vengono passati
