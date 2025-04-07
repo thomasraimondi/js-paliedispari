@@ -11,7 +11,6 @@ do {
 } while (isNaN(userNumber) || userNumber < 1 || userNumber > 5);
 
 //Funzione che genera il numero random
-// const pcNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
 const pcNumber = randomNumber(5);
 
 console.log("User Chioce: " + userChoice);
