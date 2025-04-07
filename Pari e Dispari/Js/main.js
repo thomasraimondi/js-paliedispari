@@ -41,6 +41,12 @@ if ((userChoice === "pari") & evenWin) {
  * @returns {number} numero che viene generato
  */
 function randomNumber(max, min = 1) {
+  max = parseInt(max);
+  min = parseInt(min);
+
+  if (isNaN(max)) return false;
+  if (isNaN(min)) return false;
+
   const number = Math.floor(Math.random() * (max - min)) + min;
   return number;
 }
@@ -51,6 +57,9 @@ function randomNumber(max, min = 1) {
  * @returns {boolean} isEvenWin ritorna True se il numero è pari e false se è dispari
  */
 function userWin(num) {
+  num = parseInt(num);
+  if (isNaN(num)) return false;
+
   const isEvenWin = num % 2 === 0 ? true : false;
   return isEvenWin;
 }
