@@ -1,5 +1,10 @@
-const userWord = prompt("Inserisci una parola");
+let userWord;
 let reverseUserWord = "";
+
+do {
+  userWord = prompt("Inserisci una parola");
+} while (userWord.length < 2);
+
 console.log("User Word: " + userWord);
 
 for (i = userWord.length - 1; i >= 0; i--) {
